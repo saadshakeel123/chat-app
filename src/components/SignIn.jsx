@@ -2,17 +2,14 @@ import React from 'react'
 import GoogleButton from 'react-google-button'
 
 import { auth } from "../firebase"
-import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"
+import { UserAuth } from '../context/AuthContext';
 
-// const googleSignIn = () => {
-//   const provider = new GoogleAuthProvider();
-//   signInWithRedirect(auth, provider);
-// }
-const googleSignIn = () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
-    // signInWithRedirect(auth, provider)
-  };
+
+
+function SignIn() {
+  const { googleSignIn, user } = UserAuth();
+  
+
   const handleGoogleSignIn = async () => {
     try {
       await googleSignIn();
@@ -20,8 +17,6 @@ const googleSignIn = () => {
       console.log(error);
     }
   };
-
-function SignIn() {
   return (
     <div className='flex justify-center py-14 rounded-lg'>
       <GoogleButton onClick={handleGoogleSignIn} />
