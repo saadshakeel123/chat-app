@@ -23,13 +23,13 @@ const Chat = () => {
 
     return (
         <>
-            <main className="flex flex-col p-[10px] ">
+            <main className="flex flex-col h-[81%]  p-[10px] overflow-y-scroll ">
                 {messages &&
                     messages.map((message) => (
                         <Message key={message.id} message={message} />
                     ))}
             </main>
-            {/* Send Message Compoenent */}
+            
             <SendMessage scroll={scroll} />
             <span ref={scroll}></span>
         </>

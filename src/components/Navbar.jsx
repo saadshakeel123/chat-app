@@ -11,7 +11,7 @@ function Navbar() {
     return (
         <>
             <div className=" rounded-lg h-20 flex justify-between items-center p-4">
-                <h1 className="text-white text-3xl font-bold">Chat</h1>
+                <h1 className="text-gray-900 text-3xl font-bold bg-white border-white border-2 rounded-md">Chat</h1>
 
             {user ? <Logout /> : null}
             </div>

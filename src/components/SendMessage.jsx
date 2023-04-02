@@ -4,7 +4,7 @@ import {addDoc, collection, serverTimestamp} from 'firebase/firestore'
 
 const style = {
   form: `h-14 w-full max-w-[728px]  flex text-xl absolute bottom-0`,
-  input: `w-full text-xl mx-2 my-2 p-3 bg-gray-600 text-white outline-none border-none rounded-full`,
+  input: `w-full text-lg  mx-2 my-2 p-3 bg-gray-600 text-white outline-none border-none rounded-full`,
   button: `w-[7%] mx-1 my-2 bg-indigo-800 text-white rounded-full flex justify-center py-2`,
 };
 
